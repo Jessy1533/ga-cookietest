@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+	font-family: 'Dosis', sans-serif; /*update with the font from Google fonts*/
+	line-height: 1.5;
+	margin: 0;
+}
+
+h1, h2, h3 {
+
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+header{
+	text-align: center;
+	color: white;
+	/* background-color: green;
+	background-image: url(../images/header-bg.jpg);
+	background-size: cover; */
+
+
+	background: green url(../images/header-bg.jpg) no-repeat;
+	background-size: cover;
+	/*this is the same as the blanked out code above*/
+	background-position: center;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+
+header a, footer a { 
+	color: white;
+	text-decoration: none; /*take away URL underline*/
+	margin: 10px; 
+	padding-bottom: 10px;
+}
+
+header a:hover{
+	border-bottom: 1px solid white;
+}
+
+header li{ /*only li in header*/
+	display: inline; /*remove bullet points in a list and get them to sit next to each other*/
+
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.recipes{
+	width:60%; /*of the parent container therefore 600px*/
+	float:left;
+	margin-bottom: 30px;
+}
+
+.sidebar{
+	width: 40%; /*of the parent container, 400px*/
+	float:right;
+	padding: 30px;
+	background: lightgreen url(../images/sidebar);
+
+}
+
+.cookie{
+	float:left;
+	width: 50%;
+	padding: 0 20px; /*0 top/botto, 20 L/R*/
+}
+
+.cookie img {
+	width: 100%; /*images should be the side of the container*/
+}
+
+footer{
+	clear: both; /*keeps footer at the bottom - ignore floater parametres*/
+	text-align: center;
+	background: black;
+	color: white;
+	padding-top: 20px;
+}
+
+
+@media (max-width: 1000px) { /*in the considion of less than 1000px*/
+	.sidebar{
+		display: none;
+	}
+
+	.recipes, .container {
+		width: 100%;
+
+	}
+}
+
+@media (max-width: 600px) { /*for when it's on a phone and should be 1 column*/
+	.cookie{
+		width: 100%;
+		float: none;
+	}
+}
+
+
+
+
+
